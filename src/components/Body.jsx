@@ -1,14 +1,22 @@
 import React from "react";
+import Header from "./Header";
+import Browse from "./Browse";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from "./Login";
 
 const Body = () => {
-  return (
-    <div className="">
-      <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/IN-en-20240923-TRIFECTA-perspective_74e21c19-980e-45ef-bd6c-78c1a6ce9381_large.jpg"
-        alt="background"
-      />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/browse",
+      element: <Browse />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default Body;

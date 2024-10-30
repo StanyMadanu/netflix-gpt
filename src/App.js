@@ -1,25 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
-import Login from "./components/Login";
-import Browser from "./components/Browser";
+import React from "react";
+import Body from "./components/Body";
 
 function App() {
-  const appRouter = createBrowserRouter([
-    {
-      path: "/",
-      element: <Login />,
-    },
-    {
-      path: "/browser",
-      element: <Browser />,
-    },
-  ]);
-
-  return (
-    <>
-      <RouterProvider router={appRouter} />
-    </>
-  );
+  return <Body />;
 }
 
 export default App;
